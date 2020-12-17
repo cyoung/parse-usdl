@@ -51,4 +51,7 @@ exports.CodeToKey = {
   DDJ: 'dateAge21',
   DDK: 'organDonor',
   DDL: 'veteran',
+  // outdated
+  DCT: 'firstName',
+  DAB: 'lastName',
 }
