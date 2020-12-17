@@ -13,8 +13,11 @@ exports.parse = function parseCode128(str, options = defaultOptions) {
     if (!started) {
       if (line.indexOf('ANSI ') === 0) {
         started = true
+        splitLine = line.split("DL")
+        line = splitLine[splitLine.length - 1]
+      } else {
+        return
       }
-      return
     }
 
     let code = getCode(line)
